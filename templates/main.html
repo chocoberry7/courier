@@ -1,0 +1,242 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="XYZ-Couriers" name="keywords">
+    <meta content="XYZ-Delivery Services" name="description">
+    <!-- tab icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/logo_whit.png">
+
+
+    <!-- Google Font -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- Css Styles -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">  -->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/styles.css" type="text/css">
+
+    <title>{% block title %}  {% endblock %}</title>
+</head>
+    <body>
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+
+
+    <!-- Topbar Start -->
+    <div class="container">
+        <div class="container-line">
+            <div class="container-child">
+                    <ul class="navbar-nav ml-n2">
+                        <li class="nav-item border-right border-secondary">
+                          <a class="nav-link" href="#">Monday-Sunday , 24/7 get a free shipping for items less than 2kg
+                          </a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="container-children">
+                    <ul class="navbar-nav ml-n2">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-lin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Header Section Begin -->
+
+        <header class="header">
+
+        <a data-aos="zoom-in-left" data-aos-delay="150" href="#home" class="logo"><img src="static/assets/logo_whitz.jpg"></a>
+        <a data-aos="zoom-in-left" data-aos-delay="180"href="#home" class="logs">Service<span>S</span></a>
+
+
+            <nav class="navbar">
+                <a data-aos="zoom-in-left" data-aos-delay="300" href="{% url 'home' %}">home</a>
+                <a data-aos="zoom-in-left" data-aos-delay="450"href="{% url 'services' %}">services</a>
+                <a data-aos="zoom-in-left" data-aos-delay="600"href="{% url 'gallery' %}">gallery</a>
+                <a data-aos="zoom-in-left" data-aos-delay="750" href="{% url 'contact' %}">contact-us</a>
+            </nav>
+
+            <div class="icons">
+            <div data-aos="zoom-in-left" data-aos-delay="900" id="menu-btn" class="fas fa-bars"></div>
+            <div data-aos="zoom-in-left" data-aos-delay="1000" id="info-btn" class="fas fa-info-circle"></div>
+            <div data-aos="zoom-in-left" data-aos-delay="1100" id="search-btn" class="fas fa-search"></div>
+            <div data-aos="zoom-in-left" data-aos-delay="1200" id="login-btn" class="fas fa-user"></div>
+            </div>
+
+            <form action="" class="search-form">
+            <input type="search" name="searched" placeholder="Enter tracking number.." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <form action="" class="login-form">
+                {% if user.is_authenticated %}
+                <h3>PROFILE</h3>
+                <p>Welcome: <a href="#" style="color:gray"> {{user.username}}</a></p>
+                <p>Email:<a href="#" style="color: gray"> {{user.email }}</a></p>
+                <p><a href="{% url 'logout' %}" class="btn"  style="background-color: red; color:white">Logout</a></p>
+                {% else %}
+                  <p><a href="{% url 'login' %}" class="btn" style="color:white">Login</a></p>
+                  <p><a href="{% url 'register' %}" class="btn" style="background-color: seagreen; color:white">Register</a></p>
+                {% endif %}
+                </form>
+        </header>
+
+            <div class="contact-info" id="contacts-infos">
+
+                <div id="close-contact-info" class="fas fa-times"></div>
+
+                <div class="info">
+                <i class="fas fa-phone"></i>
+                <h3>phone number</h3>
+                <p>+123-456-7890</p>
+                <p>+111-555-3333</p>
+                </div>
+
+                <div class="info">
+                <i class="fas fa-envelope"></i>
+                <h3>email address</h3>
+                <p>examples@gmail.com</p>
+                <p>examples@gmail.com</p>
+                </div>
+
+                <div class="info">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>office address</h3>
+                <p>ontario, canada - 400104</p>
+                </div>
+
+                <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                </div>
+
+            </div>
+
+            <!-- header section ends -->
+
+
+         {% block content%}
+
+
+          {%endblock%}
+
+
+
+<!-- footer section starts  -->
+<div class="footers">
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <a href="{% url 'home' %}" class="logo">XYZ <i class="fas fa-shipping-fast"></i> Services</a>
+            <p>International Express Courier is at the heart of what XYZ-services have been doing since 2009.
+                thats why we earn 100% clients trust worldwide..</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Quick Links</h3>
+            <a href="{% url 'home' %}" class="links"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#about" class="links"> <i class="fas fa-arrow-right"></i> About </a>
+            <a href="services.html" class="links"> <i class="fas fa-arrow-right"></i> Services </a>
+            <a href="gallery.html" class="links"> <i class="fas fa-arrow-right"></i> Gallery </a>
+            <a href="contact.html" class="links"> <i class="fas fa-arrow-right"></i> Contact-Us </a>
+            <a href="#destination" class="links"> <i class="fas fa-arrow-right"></i> Terms & Conditions </a>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3>Contact Info</h3>
+            <p> <i class="fas fa-map"></i> Ontario, Canada </p>
+            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+            <p> <i class="fas fa-envelope"></i> examples@gmail.com </p>
+            <p> <i class="fas fa-clock"></i> 7:00am - 10:00pm </p>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest updates</p>
+            <form action="">
+                <input type="email" name="" placeholder="Enter Your Email" class="email" id="">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+
+    </div>
+
+</section>
+</div>
+
+<div class="credit">Credit to <span>usa-courier-services</span> | all rights reserved!
+    <br>
+    ©<span id="year"></span>
+</div>
+
+<!-- footer section ends -->
+
+
+<!-- jquery file link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Js Plugins -->
+        <script src="static/js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/jquery.countdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/main.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 700,
+        offset:150,
+    });
+
+</script>
+    </body>
+</html>

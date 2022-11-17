@@ -1,0 +1,150 @@
+{% load static %}
+{%  block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="XYZ-Couriers" name="keywords">
+    <meta content="XYZ-Delivery Services" name="description">
+
+
+    <!-- tab icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/logo_whit.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/styles.css" type="text/css">
+
+    <title>Live Tracking Service </title>
+</head>
+    <body>
+
+<div class="card">
+  <div class="card-header">
+    {% if searched %}
+		You Searched For {{ searched }}
+	{% else %}
+		Search Events...
+	{% endif %}
+  </div>
+  <div class="card-body">
+
+<form method=POST action="{% url 'search-details' %}">
+        {% csrf_token %}
+
+        <input class="form-control me-2" type="search" placeholder="Search Events" aria-label="Search" name="q">
+        <br/>
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+      </form>
+
+</div></div>
+
+	
+		<br/>
+		{% for tracking_item in tracking_items %}
+
+            {{ tracking_item.name }}
+<br/>
+                {{ tracking_item.contactinfo.name }}
+<br/>
+                    {{ tracking_item.name }}
+<br/>
+                            {{ tracking_item.name }}
+<br/>
+                    {{ tracking_item.name }}
+	<br/><br/>
+		{% endfor %}
+
+		{% for items in tracking_contact %}
+
+            {{ items.name }}
+<br/>
+                {{ items.Issn }}
+<br/>
+                    {{ items.phone }}
+<br/>
+                            {{ items.Email }}
+<br/>
+                    {{ tracking_item.name }}
+
+
+
+
+
+
+	<br/><br/>
+		{% endfor %}
+
+
+
+
+
+
+    {% for items in tracking_summary %}
+        {{ items.senders_country }} <br/><br/>{{ items.shipment_date }}
+
+    {% endfor %}
+
+
+
+
+    {% for items in tracking_progress %}
+      <button type="button"  value='{{ items.confirmed }}'  class="btn btn-primary" style="background-color: #00BFA5; border: none;">{{ items.confirmed }}</button>
+            <button type="button" value="{{ items.processing }}" class="btn btn-secondary" style="background-color: gray; border: none;">{{ items.processing }}</button>
+            <button type="button" value="{{ items.checked }}" class="btn btn-success" style="background-color: #64DD17; border: none;">{{ items.checked }}</button>
+            <button type="button" value="{{ items.delayed }}" class="btn btn-success" style="background-color: #FF7043; border: none;">{{ items.delayed }}</button>
+            <button type="button"  value="{{ items.dispatched }}"class="btn btn-danger" style="background-color: #0091EA; border: none;">{{ items.dispatched }}</button>
+            <button type="button" value="{{ items.delivered }}" class="btn btn-warning" style="background-color:  #FFB74D; border: none;">{{ items.delivered }}</button>
+    {% endfor %}
+
+
+
+
+
+
+
+<!-- jquery file link  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Js Plugins -->
+        <script src="static/js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/jquery.countdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/main.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 700,
+        offset:150,
+    });
+
+</script>
+
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,594 @@
+{% load static %}
+{%  block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="XYZ-Couriers" name="keywords">
+    <meta content="XYZ-Delivery Services" name="description">
+
+
+    <!-- tab icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/logo_whit.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/styles.css" type="text/css">
+
+    <title>Live Tracking Service </title>
+</head>
+    <body>
+
+
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+<section class="track-bar">
+  <p class="track-title"><a href="{% url 'home' %}" style="color: #FFB74D"><i class="fa fa-home" style="float: right;"></i></a></p>
+
+</section>
+
+
+<!-- newsletter section  -->
+
+<section class="newsletter">
+
+    <div class="content">
+        <h1 class="heading" style="border: none;" id="track">Enter Your Consignment ID.</h1>
+        <p>We make parcel tracking easier!</p>
+        <form action="" >
+            <input type="search" name="searched" placeholder="eg: NPR2-W8CF-1235" id="" class="email">
+            <input type="submit" value="Track Shipment" href="" class="btn">
+
+        </form>
+    </div>
+
+</section>
+
+<!------------------------ Track--------------------------->
+<section class="track">
+    <div class="track-home">
+
+        <div class="track-img">
+            <img src="static/assets/barcodes.png" class="track-img" alt="barcodes">
+            <h3 class="track-sub"> NPR2-W8CF-1235 {{ }}</h3>
+        </div>
+    </div>
+
+    <div class="alert" role="alert" style="background-color: #666; color: white; border-radius: 0;">
+      <h5><i class="fa fa-address-book-o" aria-hidden="true"></i> CONTACT-INFO</h5>
+    </div>
+  <div class="table-responsive">
+          <table class="table  table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Order</th>
+                  <th scope="col">Cargo-Info</th>
+                  <th scope="col">Receiver's Info</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Names</th>
+                  <td>XYZ-services</td>
+                  <td>Mark Barons</td>
+                </tr>
+                <tr>
+                  <th scope="row">Address</th>
+                  <td>25 Kent Ave</td>
+                  <td>21 Jacob Ave</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mobile</th>
+                  <td>09012344589</td>
+                  <td>08189037363</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td>abc@gmail.co.uk</td>
+                  <td>abc@gmail.co.uk</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">Model</th>
+                  <td>Airfreight</td>
+                  <td>Unknown</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">ISSN</th>
+                  <td>Rx28-Ex34</td>
+                  <td>Unknown</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+</div>
+
+
+    <div class="alert" role="alert" style="background-color: #666; color: white; border-radius: 0; margin-top: 2rem;">
+      <h5><i class="fa fa-history" aria-hidden="true"></i>  SHIPMENT STATUS <span>IN TRANSIT</span></h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">(BL or BoL)</th>
+                <th scope="col">Sender's Info</th>
+                <th scope="col">Receiver's Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Names</th>
+                <td>Mr Maxwell isco</td>
+                <td>Mark Barons</td>
+              </tr>
+              <tr>
+                <th scope="row">Address</th>
+                <td>25 Kent Ave</td>
+                <td>21 Jacob Ave</td>
+              </tr>
+              <tr>
+                <th scope="row">Mobile</th>
+                <td>09012344589</td>
+                <td>08189037363</td>
+              </tr>
+              <tr>
+                <th scope="row">Email</th>
+                <td>abc@gmail.co.uk</td>
+                <td>abc@gmail.co.uk</td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+
+    </div>
+    <div class="alert alert-info" role="alert">
+      <h5> <i class="fa fa-edit"> </i>  PACKAGE PROGRESS </h5>
+    </div>
+    <div class="track-progress">
+
+
+      <button type="button" class="btn btn-primary" style="background-color: #00BFA5; border: none;">Confirmed</button>
+            <button type="button" class="btn btn-secondary" style="background-color: gray; border: none;">Processing</button>
+            <button type="button" class="btn btn-success" style="background-color: #64DD17; border: none;">Checked</button>
+            <button type="button" class="btn btn-success" style="background-color: #FF7043; border: none;">Delayed</button>
+            <button type="button" class="btn btn-danger" style="background-color: #0091EA; border: none;">Dispatched</button>
+            <button type="button" class="btn btn-warning" style="background-color:  #FFB74D; border: none;">Package Delivered</button>
+    </div>
+
+
+
+
+    <div class="table-responsive">
+      <div class="alert" role="alert" style="background-color: #666; color: white; border-radius: 0;">
+        <h5><i class="fa fa-list-alt" aria-hidden="true"></i> HISTORY SUMMARY </h5>
+      </div>
+
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Senders Country</th>
+                <th scope="col">Package</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Spain</th>
+                <td>3 items</td>
+                <td>In Transit</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+    <div class="table-responsive">
+      <table class="table  table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Carrier</th>
+              <th scope="col">Type of Cargo</th>
+              <th scope="col">Delivery Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">DHL</th>
+              <td>Air Freight</td>
+              <td>Door-To-Door</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+  </div>
+  <div class="table-responsive">
+    <table class="table  table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Destination.1</th>
+            <th scope="col">Destination.2</th>
+            <th scope="col">Destination.3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Thailand</th>
+            <td>Taoyuan International Airport</td>
+            <td>21 Jacob Ave</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>
+
+    <div class="table-responsive">
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Weight</th>
+                <th scope="col">Delivery Mode</th>
+                <th scope="col">Carrier Ref.No </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">15kg</th>
+                <td>Home Delivery</td>
+                <td>NPR2-W8CF-1235</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+
+    <div class="table-responsive">
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Products</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Payment Mode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Unknown</th>
+                <td>4</td>
+                <td>Agent</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+
+    <div class="table-responsive">
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Total Freight</th>
+                <th scope="col">Shipment Date</th>
+                <th scope="col">Departure Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>2022-02-23</td>
+                <td>19:00 pm</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+    <div class="table-responsive">
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Pick-up Date</th>
+                <th scope="col">Pick-up Time</th>
+                <th scope="col">Reverse Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">2022-03-02</th>
+                <td>17:00 pm</td>
+                <td>2022-03-16</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+
+
+    <div class="alert" role="alert" style="background-color: #FFB74D; color: #fff; border-radius: 0;">
+      <h5><i class="fa fa-list" aria-hidden="true"></i> PACKAGE DETAILS</h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Parcel Type</th>
+                <th scope="col">Description</th>
+                <th scope="col">Length(cm)</th>
+                <th scope="col">Width(cm)</th>
+                <th scope="col">Height(cm)</th>
+                <th scope="col">Weight(cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Pallet</th>
+                <td>Carton</td>
+                <td>0.00cm</td>
+                <td>0.00cm</td>
+                <td>0.00cm</td>
+                <td>0.00cm</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+    <div class="table-responsive">
+      <table class="table  table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Total Volumetric Weight:</th>
+              <th scope="col">Total Volume:</th>
+              <th scope="col">Total Actual Weight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">0.00kg</th>
+              <td></td>
+              <td>9kg</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="alert" role="alert" style="background-color: #FFB74D; color:  #fff; border-radius: 0;">
+    <h5><i class="fa fa-info-circle" aria-hidden="true"></i> DELIVERY DETAILS </h5>
+  </div>
+    <div class="table-responsive">
+
+        <table class="table  table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Expected Pick-up Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Agent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">2022-03-02</th>
+                <td>In Transit</td>
+                <td>Mrs Beckford</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+    </div>
+
+    <div class="alert" role="alert" style="background-color: #666; color: white; border-radius: 0;">
+      <h5><i class="fa fa-money" aria-hidden="true"></i> INTERNATIONAL  FREIGHT CHARGES</h5>
+    </div>
+    <div class="table-responsive">
+      <table class="table  table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Amount</th>
+              <th scope="col">Insurance</th>
+              <th scope="col">Total</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="color: green">$865</th>
+              <td style="color: green">PAID <i class=" fa fa-check" style="color: seagreen"></i></td>
+              <td style="color: green">$910</td>
+              <td style="color: green">PAID <i class=" fa fa-check" style="color: seagreen"></i></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+  </div>
+  <div class="alert" role="alert"  style="background-color: #666; color: white; border-radius: 0;">
+    <h5><i class="fa fa-money" aria-hidden="true"></i> APPROX. DELIVERY COST</h5>
+  </div>
+  <div class="table-responsive">
+    <table class="table  table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Amount</th>
+            <th scope="col">Custom Tax</th>
+            <th scope="col">Total</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: red">Unknown</td>
+            <td style="color: red">UnPaid <i class="fa fa-times" style="color: red"></i></td>
+            <td style="color: red">Unknown</td>
+            <td style="color: red">UnPaid <i class="fa fa-times" style="color: red"></i></td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- footer section starts  -->
+<div class="footers">
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <a href="#" class="logo">XYZ <i class="fas fa-shipping-fast"></i> Services</a>
+            <p>International Express Courier is at the heart of what XYZ-services have been doing since 2009.
+                thats why we earn 100% clients trust worldwide..</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <h3>Quick Links</h3>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#about" class="links"> <i class="fas fa-arrow-right"></i> About </a>
+            <a href="services.html" class="links"> <i class="fas fa-arrow-right"></i> Services </a>
+            <a href="gallery.html" class="links"> <i class="fas fa-arrow-right"></i> Gallery </a>
+            <a href="contact.html" class="links"> <i class="fas fa-arrow-right"></i> Contact-Us </a>
+            <a href="#destination" class="links"> <i class="fas fa-arrow-right"></i> Terms & Conditions </a>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3>Contact Info</h3>
+            <p> <i class="fas fa-map"></i> mumbai, india </p>
+            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+            <p> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </p>
+            <p> <i class="fas fa-clock"></i> 7:00am - 10:00pm </p>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest updates</p>
+            <form action="">
+                <input type="email" name="" placeholder="Enter Your Email" class="email" id="">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+
+    </div>
+
+</section>
+</div>
+
+<div class="credit">credit to <span>usa-courier-services</span> | all rights reserved!</div>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery file link  -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Js Plugins -->
+        <script src="static/js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/jquery.countdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/main.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 700,
+        offset:150,
+    });
+
+</script>
+
+    </body>
+</html>
+
+
+
+{% endblock %}

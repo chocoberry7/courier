@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}Update Tracks{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+       {% if user == user.is_superuser %}
+
+              <h1>Update Tracks...</h1><hr>
+
+              <form action="" method="POST">
+                     {% csrf_token %}
+                     {{ form.as_p }}<br>
+
+                     <button type="submit" value="submit" class="btn btn-success">Update</button>
+              </form>
+              {% else %}
+              <div class="card text-center">
+                     <h2 class="text-danger">Access Denied</h2>
+                     <p class="text-danger">Only Please Contact Our Customer Service...</p>
+              </div>
+       {% endif %}
+{% endif %}
+{% endblock %}

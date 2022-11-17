@@ -1,0 +1,142 @@
+{% load static %}
+
+
+
+{% block content%}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="XYZ-Couriers" name="keywords">
+    <meta content="XYZ-Delivery Services" name="description">
+    <!-- tab icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="static/assets/logo_whit.png">
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <!-- Css Styles -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">  -->
+    <link rel="stylesheet" href="static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css" type="text/css">
+
+    <title>Register</title>
+   </head>
+<body>
+
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="static/assets/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Every new friend is a <br> new adventure</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="static/assets/backImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <p class="title">SIGNUP<a href="{% url 'home' %}" style="color: #FFB74D"><i class="fa fa-home" style="float: right;"></i></a></p>
+            {% include 'partials/flash_messages.html'%}
+         <form action="{% url 'register' %}" method="post">
+             {% csrf_token %}
+            <div class="input-boxes">
+
+              <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" value="{{data.username}}" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" value="{{data.email}}" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password"  name="password" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password2" placeholder="Confirm your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Register">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip"><a href="{% url 'login' %}">Login</a></label></div>
+                <div class="text sign-up-text"> Forgot Password?  <label for="flip"><a href="{% url 'request-reset-email' %}">Reset it here</a></label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+
+<!-- jquery file link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Js Plugins -->
+        <script src="static/js/jquery-3.3.1.min.js"></script>
+        <script src="static/js/jquery.countdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+     setTimeout(function(){
+        if ($('#msg').length > 0 ){
+           $('#msg').remove();
+        }
+    }, 19999);
+
+</script>
+</body>
+</html>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
